@@ -1,0 +1,251 @@
+/* Styles pour la page formations */
+.formations-page {
+    background-color: #f8f8f8;
+}
+
+/* Hero Section */
+.formations-hero {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/cooking-class.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    margin-bottom: 3rem;
+}
+
+.formations-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.formations-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Onglets de catégories */
+.formations-categories {
+    padding: 0 5%;
+    margin-bottom: 3rem;
+}
+
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background: #000;
+    color: white;
+}
+
+/* Grille des formations */
+.formations-grid {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.formation-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.formation-card:hover {
+    transform: translateY(-5px);
+}
+
+.formation-image {
+    position: relative;
+    height: 200px;
+}
+
+.formation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.level {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.formation-content {
+    padding: 1.5rem;
+}
+
+.formation-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.formation-details {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.formation-details li {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.formation-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.enroll-btn {
+    padding: 0.8rem 1.5rem;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-btn:hover {
+    background: #333;
+}
+
+/* Section Pourquoi nous choisir */
+.why-choose-us {
+    padding: 4rem 5%;
+    background: white;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Section Contact */
+.contact-formation {
+    padding: 4rem 5%;
+    background: #f8f8f8;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-btn {
+    padding: 1rem 2rem;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .formations-hero h1 {
+        font-size: 2rem;
+    }
+
+    .category-tabs {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        width: 100%;
+    }
+
+    .formation-card {
+        margin: 0 1rem;
+    }
+}

@@ -1,0 +1,342 @@
+/* Styles pour la page menu */
+.menu-page {
+    padding: 80px 5% 2rem;
+    background-color: var(--light-gray);
+    min-height: calc(100vh - 200px);
+}
+
+.menu-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.header-text p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Filtres */
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: var(--white);
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Sections du menu */
+.menu-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Cartes des plats */
+.dish-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dish-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.dish-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover .dish-image img {
+    transform: scale(1.1);
+}
+
+.dish-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.dish-content {
+    padding: 1.5rem;
+}
+
+.dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dish-header h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.dish-description {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.dish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dish-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tag.vegetarian {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.tag.spicy {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.tag.signature {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.add-to-cart {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart:hover {
+    background: darken(var(--primary-color), 10%);
+    transform: scale(1.1);
+}
+
+/* Panier flottant */
+.floating-cart {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.cart-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.cart-icon i {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--accent-color);
+    color: var(--white);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.cart-preview {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    display: none;
+}
+
+.cart-preview.active {
+    display: block;
+}
+
+.cart-preview h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.cart-item-price {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--light-gray);
+    font-weight: 600;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.checkout-btn:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-header {
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .menu-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-cart {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .cart-preview {
+        width: calc(100vw - 2rem);
+        right: -1rem;
+    }
+}

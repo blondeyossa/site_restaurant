@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander - SavoryAfrique</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/checkout-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="../../../index.html">🍽 SavoryAfrique</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../../index.html">Accueil</a></li>
+            <li><a href="../../menu/index.html">Menu</a></li>
+            <li><a href="checkout.html" class="active">Commander</a></li>
+            <li><a href="../formations/index.html">Formations</a></li>
+            <li><a href="../articles/index.html">Articles</a></li>
+            <li><a href="../auth/login.html" class="auth-btn">Connexion</a></li>
+        </ul>
+    </nav>
+
+    <div class="checkout-page">
+        <div class="checkout-header">
+            <h1>Finaliser votre commande</h1>
+            <div class="checkout-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Panier</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Livraison</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Paiement</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-content">
+            <!-- Étape 1: Panier -->
+            <div class="checkout-step-content active" data-step="1">
+                <div class="cart-summary">
+                    <h2>Votre Panier</h2>
+                    <div class="cart-items">
+                        <!-- Les articles seront ajoutés dynamiquement ici -->
+                    </div>
+                    <div class="cart-totals">
+                        <div class="subtotal">
+                            <span>Sous-total</span>
+                            <span class="amount">15600fcfa</span>
+                        </div>
+                        <div class="delivery-fee">
+                            <span>Frais de livraison</span>
+                            <span class="amount">2000fcfa</span>
+                        </div>
+                        <div class="total">
+                            <span>Total</span>
+                            <span class="amount">17600fcfa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Étape 2: Livraison -->
+            <div class="checkout-step-content" data-step="2">
+                <div class="delivery-info">
+                    <h2>Informations de livraison</h2>
+                    <form id="delivery-form" class="checkout-form">
+                        <div class="form-group">
+                            <label for="fullname">Nom complet</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Adresse</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="postal">Code postal</label>
+                                <input type="text" id="postal" name="postal" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ville</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="instructions">Instructions de livraison (optionnel)</label>
+                            <textarea id="instructions" name="instructions" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Étape 3: Paiement -->
+            <div class="checkout-step-content" data-step="3">
+                <div class="payment-info">
+                    <h2>Paiement</h2>
+                    <form id="payment-form" class="checkout-form">
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="card" name="payment" value="card" checked>
+                                <label for="card">
+                                    <i class="fas fa-credit-card"></i>
+                                    Carte bancaire
+                                </label>
+                            </div>
+                            <div class="payment-method">
+                                <input type="radio" id="paypal" name="payment" value="paypal">
+                                <label for="paypal">
+                                    <i class="fab fa-paypal"></i>
+                                    PayPal
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="card-details">
+                            <div class="form-group">
+                                <label for="card-number">Numéro de carte</label>
+                                <div class="card-input-wrapper">
+                                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                                    <i class="far fa-credit-card"></i>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Date d'expiration</label>
+                                    <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Nom sur la carte</label>
+                                <input type="text" id="card-name" name="card-name" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-navigation">
+            <button class="prev-step" disabled>Précédent</button>
+            <button class="next-step">Suivant</button>
+        </div>
+        <button onclick="window.location.href='../../../index.html'">Retour à l'accueil</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 237 Rue de la Saveur, yaounde</p>
+                <p><i class="fas fa-phone"></i> +237 653 15 98 04</p>
+                <p><i class="fas fa-envelope"></i> blondeyossa1@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi: 11h - 23h</p>
+                <p>Samedi - Dimanche: 11h - 00h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SavoryAfrique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/checkout-script.js"></script>
+</body>
+</html>

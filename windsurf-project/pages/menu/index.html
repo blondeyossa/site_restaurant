@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - SavoryAfrique</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/menu-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">
+            <a href="../../index.html">🍽 SavoryAfrique</a>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="index.html" class="active">Menu</a></li>
+            <li><a href="../order/checkout.html">Commander</a></li>
+            <li><a href="../formations/index.html">Formations</a></li>
+            <li><a href="../articles/index.html">Articles</a></li>
+            <li><a href="../auth/login.html" class="auth-btn">Connexion</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-page">
+        <div class="menu-header">
+            <div class="header-text">
+                <h1>Notre Menu</h1>
+                <p>Découvrez nos spécialités africaines authentiques</p>
+            </div>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="entrees">Entrées</button>
+                <button class="filter-btn" data-filter="plats">Plats</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="boissons">Boissons</button>
+            </div>
+        </div>
+
+        <div class="menu-categories">
+            <!-- Entrées -->
+            <div class="menu-section" data-category="entrees">
+                <h2 class="section-title">Entrées</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-category="entrees">
+                        <div class="dish-image">
+                            <img src="../../images/allo.jpeg" alt="Alloco">
+                            <span class="dish-badge">Populaire</span>
+                        </div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Alloco</h3>
+                                <span class="price">4550fcfa</span>
+                            </div>
+                            <p class="dish-description">Bananes plantains frites servies avec une sauce épicée</p>
+                            <div class="dish-footer">
+                                <div class="dish-tags">
+                                    <span class="tag vegetarian">Végétarien</span>
+                                    <span class="tag spicy">Épicé</span>
+                                </div>
+                                <button class="add-to-cart" data-id="alloco">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plats Principaux -->
+            <div class="menu-section" data-category="plats">
+                <h2 class="section-title">Plats Principaux</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-category="plats">
+                        <div class="dish-image">
+                            <img src="../../images/jol.jpeg" alt="Jollof Rice">
+                            <span class="dish-badge">Chef's Choice</span>
+                        </div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Jollof Rice</h3>
+                                <span class="price">10000fcfa</span>
+                            </div>
+                            <p class="dish-description">Riz parfumé aux épices, tomates et légumes, servi avec du poulet grillé</p>
+                            <div class="dish-footer">
+                                <div class="dish-tags">
+                                    <span class="tag spicy">Épicé</span>
+                                    <span class="tag signature">Signature</span>
+                                </div>
+                                <button class="add-to-cart" data-id="jollof">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dish-card" data-category="plats">
+                        <div class="dish-image">
+                            <img src="../../images/maf.jpeg" alt="Mafé">
+                        </div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Mafé</h3>
+                                <span class="price">12500fcfa</span>
+                            </div>
+                            <p class="dish-description">Ragoût à la sauce d'arachide avec viande de bœuf et légumes</p>
+                            <div class="dish-footer">
+                                <div class="dish-tags">
+                                    <span class="tag spicy">Épicé</span>
+                                </div>
+                                <button class="add-to-cart" data-id="mafe">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-section" data-category="desserts">
+                <h2 class="section-title">Desserts</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-category="desserts">
+                        <div class="dish-image">
+                            <img src="../../images/thia.jpeg" alt="Thiakry">
+                        </div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Thiakry</h3>
+                                <span class="price">5000fcfa</span>
+                            </div>
+                            <p class="dish-description">Dessert à base de couscous sucré, yaourt et fruits secs</p>
+                            <div class="dish-footer">
+                                <div class="dish-tags">
+                                    <span class="tag vegetarian">Végétarien</span>
+                                </div>
+                                <button class="add-to-cart" data-id="thiakry">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boissons -->
+            <div class="menu-section" data-category="boissons">
+                <h2 class="section-title">Boissons</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-category="boissons">
+                        <div class="dish-image">
+                            <img src="../../images/bis.jpeg" alt="Bissap">
+                        </div>
+                        <div class="dish-content">
+                            <div class="dish-header">
+                                <h3>Bissap</h3>
+                                <span class="price">31350fcfa</span>
+                            </div>
+                            <p class="dish-description">Boisson rafraîchissante à base de fleurs d'hibiscus</p>
+                            <div class="dish-footer">
+                                <div class="dish-tags">
+                                    <span class="tag vegetarian">Végétarien</span>
+                                </div>
+                                <button class="add-to-cart" data-id="bissap">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panier flottant -->
+    <div class="floating-cart">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+        <div class="cart-preview">
+            <h3>Votre Commande</h3>
+            <div class="cart-items">
+                <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">0fcfa</span>
+            </div>
+            <button class="checkout-btn">Commander</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 723 Rue de la Saveur, yaounde</p>
+                <p><i class="fas fa-phone"></i> +237 657 87 71 95</p>
+                <p><i class="fas fa-envelope"></i> blondeyossa1@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi: 11h - 23h</p>
+                <p>Samedi - Dimanche: 11h - 00h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SavoryAfrique. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/menu-script.js"></script>
+</body>
+</html>

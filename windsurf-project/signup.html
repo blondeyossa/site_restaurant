@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - SavoryAfrique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">🍽 SavoryAfrique</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+                <li><a href="articles.html">Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="signup-page">
+        <div class="signup-container">
+            <div class="signup-header">
+                <h1>Create Your Account</h1>
+                <p>Join SavoryAfrique to enjoy exclusive benefits and faster ordering</p>
+            </div>
+
+            <div class="signup-options">
+                <button class="social-signup google">
+                    <img src="images/google-icon.svg" alt="Google">
+                    Sign up with Google
+                </button>
+                <button class="social-signup facebook">
+                    <img src="images/facebook-icon.svg" alt="Facebook">
+                    Sign up with Facebook
+                </button>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+            </div>
+
+            <form class="signup-form" id="signupForm">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" required>
+                        <button type="button" class="toggle-password">👁</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <button type="button" class="toggle-password">👁</button>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Send me special offers and promotions</label>
+                </div>
+
+                <button type="submit" class="signup-button">Create Account</button>
+            </form>
+
+            <div class="login-link">
+                Already have an account? <a href="login.html">Log in</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>237 Flavor Street, Taste City, AE 45678</p>
+                <p>Phone: (237) 653 15 98 04</p>
+                <p>Email: blondeyossa1@gmail.com</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="signup-script.js"></script>
+</body>
+</html>

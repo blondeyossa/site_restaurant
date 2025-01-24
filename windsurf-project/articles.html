@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - SavoryAfrique</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="articles-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">🍽 SavoryAfrique</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="articles.html" class="active">Articles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="articles-page">
+        <section class="articles-header">
+            <h1>Découvrez la Cuisine Africaine</h1>
+            <p>Explorez nos articles sur la gastronomie, les traditions et la culture culinaire africaine</p>
+            
+            <div class="articles-filter">
+                <button class="filter-btn active" data-category="all">Tous</button>
+                <button class="filter-btn" data-category="recipes">Recettes</button>
+                <button class="filter-btn" data-category="culture">Culture</button>
+                <button class="filter-btn" data-category="tips">Conseils</button>
+            </div>
+        </section>
+
+        <section class="featured-article">
+            <div class="featured-content">
+                <span class="article-category">Culture</span>
+                <h2>Les Épices Essentielles de la Cuisine Africaine</h2>
+                <p>Découvrez les épices qui donnent leur caractère unique aux plats africains...</p>
+                <div class="article-meta">
+                    <span class="date">23 Jan 2025</span>
+                    <span class="read-time">8 min de lecture</span>
+                </div>
+                <a href="article-spices.html" class="read-more">Lire l'article</a>
+            </div>
+            <div class="featured-image">
+                <img src="images/spices-banner.jpg" alt="Épices africaines traditionnelles">
+            </div>
+        </section>
+
+        <section class="articles-grid">
+            <article class="article-card" data-category="recipes">
+                <img src="images/jollof-rice.jpg" alt="Jollof Rice">
+                <div class="article-content">
+                    <span class="article-category">Recettes</span>
+                    <h3>Le Secret du Parfait Jollof Rice</h3>
+                    <p>Apprenez à préparer ce plat emblématique de l'Afrique de l'Ouest...</p>
+                    <div class="article-meta">
+                        <span class="date">22 Jan 2025</span>
+                        <span class="read-time">15 min de lecture</span>
+                    </div>
+                    <a href="article-jollof.html" class="read-more">Lire l'article</a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="culture">
+                <img src="images/dining-culture.jpg" alt="Culture du repas africain">
+                <div class="article-content">
+                    <span class="article-category">Culture</span>
+                    <h3>L'Art du Repas Partagé en Afrique</h3>
+                    <p>La signification culturelle du partage des repas dans la tradition africaine...</p>
+                    <div class="article-meta">
+                        <span class="date">20 Jan 2025</span>
+                        <span class="read-time">10 min de lecture</span>
+                    </div>
+                    <a href="article-dining.html" class="read-more">Lire l'article</a>
+                </div>
+            </article>
+
+            <article class="article-card" data-category="tips">
+                <img src="images/cooking-tips.jpg" alt="Conseils de cuisine">
+                <div class="article-content">
+                    <span class="article-category">Conseils</span>
+                    <h3>5 Astuces pour Réussir vos Plats Africains</h3>
+                    <p>Les secrets des chefs pour des saveurs authentiques...</p>
+                    <div class="article-meta">
+                        <span class="date">18 Jan 2025</span>
+                        <span class="read-time">12 min de lecture</span>
+                    </div>
+                    <a href="article-tips.html" class="read-more">Lire l'article</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Restez Informé</h2>
+                <p>Inscrivez-vous à notre newsletter pour recevoir nos derniers articles et recettes</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>237 rue des saveurs, ville du gout, AE 5067</p>
+                <p>Phone: (237) 657 87 71 95</p>
+                <p>Email: blondeyossa1@gmail.com</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="articles-script.js"></script>
+</body>
+</html>
